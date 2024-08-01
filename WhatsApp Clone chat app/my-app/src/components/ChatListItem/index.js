@@ -1,5 +1,6 @@
 import { Text , View , Image, StyleSheet} from 'react-native';
 import { StatusBar } from "expo-status-bar";
+
 const ChatListItem = ({chat}) => {
  return(
       <View style={styles.container}>

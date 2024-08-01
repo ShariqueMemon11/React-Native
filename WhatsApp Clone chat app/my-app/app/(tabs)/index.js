@@ -1,24 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import ChatListIem from '../../src/components/ChatListItem/index';
-
-const chat = {
-  id: "1",
-  user: {
-    image:
-      "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/lukas.jpeg",
-    name: "Lukas",
-  },
-  lastMessage: {
-    text: "Oke",
-    createdAt: "07:30",
-  },
-};
+import ChatScreen from '../../src/Screens/ChatScreen';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ChatListIem chat={chat}/>
+      <ChatScreen/>
+      <StatusBar style='Auto'/>
       </View>
   );
 }
@@ -28,6 +17,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor:'white',
     justifyContent: 'center',
-    alignItems: 'center',
-  },
+    alignItems: 'stretch',
+    paddingTop:80,
+    paddingBottom:65,
+  }, 
+
+
 });
